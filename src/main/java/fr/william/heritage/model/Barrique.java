@@ -2,7 +2,6 @@ package fr.william.heritage.model;
 
 import java.util.Objects;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity

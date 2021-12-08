@@ -2,16 +2,10 @@ package fr.william.heritage.model;
 
 import java.util.Objects;
 
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorType;
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name="DISC", discriminatorType = DiscriminatorType.STRING)
+@MappedSuperclass
 public class Article {
 
 	@Id

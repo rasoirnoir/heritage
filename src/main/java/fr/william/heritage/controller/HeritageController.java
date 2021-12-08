@@ -40,7 +40,7 @@ public class HeritageController {
 		init();
 		StringBuilder sb = new StringBuilder();
 		sb.append("<h1>Regardez dans votre base de données MySQL <strong>JPA</strong></h1>");
-		sb.append("<p>Vous devez avoir 1 table <strong>Article</strong> dans votre base de données :</p>");
+		sb.append("<p>Vous devez avoir <strong>4 tables</strong> comme avec l'exemple précédent :</p>");
 		sb.append("<ul><li><a href='http://localhost:8080/articles'>Liste des <strong>Articles</strong> enregistrés</a></li>");
 		sb.append("<li><a href='http://localhost:8080/barriques'>Liste des <strong>Barriques</strong> enregistrées</a></li>");
 		sb.append("<li><a href='http://localhost:8080/bouteilles'>Liste des <strong>Bouteilles</strong> enregistrées</a></li>");
@@ -105,6 +105,7 @@ public class HeritageController {
 
 	/**
 	 * Méthode d'initialisation (démo)
+	 * On met plutôt un fichier data.sql dans le dossier resources
 	 * non utilisée
 	 */
 	private void init()
@@ -118,13 +119,14 @@ public class HeritageController {
         
         Barrique bar1=new Barrique();
         bar1.setCodeArticle(629043);
-        bar1.setDesignation("Barrique en chene");
+        bar1.setDesignation("Barrique en chêne");
         bar1.setRegion("Bordeaux (Margaux)");
         bar1.setCouleur("rouge");
         bar1.setPrix(85);
         bar1.setRemise(0);
         bar1.setQuantite(8);
         bar1.setContenance(1000);
+        bar1.setAnnee(2015);
         
         Bouteille b1=new Bouteille();
         b1.setCodeArticle(765439);
@@ -135,6 +137,7 @@ public class HeritageController {
         b1.setRemise(0);
         b1.setQuantite(2);
         b1.setContenance(75);
+        b1.setAnnee(2019);
         
         Bouteille b2=new Bouteille();
         b2.setCodeArticle(543289);
@@ -145,6 +148,7 @@ public class HeritageController {
         b2.setRemise(0);
         b2.setQuantite(3);
         b2.setContenance(75);
+        b2.setAnnee(2018);
         
         Bouteille b3=new Bouteille();
         b3.setCodeArticle(278237);
@@ -155,6 +159,7 @@ public class HeritageController {
         b3.setRemise(0);
         b3.setQuantite(15);
         b3.setContenance(75);
+        b3.setAnnee(2000);
         
         Bouteille b4=new Bouteille();
         b4.setCodeArticle(974534);
@@ -165,6 +170,7 @@ public class HeritageController {
         b4.setRemise(0);
         b4.setQuantite(54);
         b4.setContenance(75);
+        b4.setAnnee(2018);
         
         Vin v1 = new Vin();
         v1.setCodeArticle(666666);
@@ -178,15 +184,15 @@ public class HeritageController {
         		
         Vin v2 = new Vin();
         v2.setCodeArticle(777777);
-        v2.setDesignation("Bière de Guinot");
-        v2.setRegion("Villejuif à Perpette les oies");
+        v2.setDesignation("Bière de Simplon");
+        v2.setRegion("Montreuil à Perpette les oies");
         v2.setCouleur("Jaune");
         v2.setPrix(8.99);
         v2.setRemise(0);
         v2.setQuantite(200);
         v2.setAnnee(2015);
-        
-        System.out.println("ajout du produit: "+a1);
+	        
+	    System.out.println("ajout du produit: "+a1);
         articleRepo.save(a1);
         
         System.out.println("ajout du produit: "+bar1);
