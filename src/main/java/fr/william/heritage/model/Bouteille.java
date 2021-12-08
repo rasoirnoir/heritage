@@ -6,7 +6,6 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("BOUTEILLE")
 public class Bouteille extends Vin {
 	private int contenance;
 
